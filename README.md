@@ -1,4 +1,4 @@
-# worldpharma-backend 2
+# booking-be
 
 # Environment
 - PORT=8555

@@ -1,0 +1,25 @@
+{{> header}}
+    <head>
+      <title>{{title}}</title>
+  <style>
+    .mail-body {
+      margin: 20px 0;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<tr>
+  <td>
+    <div class="mail-body">
+      <p>WorldPharma thông báo, đơn hàng {{data.codeSequence}} vừa đổi trạng thái {{data.oldStatus}} -> {{data.newStatus}}
+        {{#if data.cancelNote}}
+              <span> với lý do: {{data.cancelNote}}</span>
+        {{/if}}
+
+      </p>
+      <p>Mời ông/bà tiến hành xử lý để đơn hàng không bị gián đoạn.</p>
+      <p><i>Trân trọng.</i></p>
+    </div>
+  </td>
+</tr>
+{{> footer}}

@@ -1,0 +1,35 @@
+{{> header}}
+    <head>
+      <title>{{title}}</title>
+  <style>
+    .mail-body {
+      margin: 20px 0;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<tr>
+  <td>
+    <div class="mail-body">
+      <p>WorldPharma thông báo, hệ thống vừa nhận được đơn hàng tạm mới với mã: {{data.code}}</p>
+      <p>Nội dung chi tiết:</p> 
+      {{#each data.quotationItems}}
+      <ul>
+       <li>
+          Tên sản phẩm: <span>{{product.name}}</span>
+        </li>
+        <li>
+          Số lượng: <span>{{quantity}}</span>
+        </li>
+        <li>
+          Giá sản phẩm: <span>{{price}}</span>
+        </li>
+      </ul>
+      {{/each}}
+     
+      <p>Mời ông/bà tiến hành xử lý để đơn hàng không bị gián đoạn.</p>
+      <p><i>Trân trọng.</i></p>
+    </div>
+  </td>
+</tr>
+{{> footer}}
